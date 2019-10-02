@@ -1,4 +1,5 @@
-import { REMOVE_FEATURE, BUY_ITEM } from '../actions';
+export const REMOVE_FEATURE = "REMOVE_FEATURE";
+export const BUY_ITEM       = "BUY_ITEM";
 
 const initialState = {
     additionalPrice: 0,
@@ -33,6 +34,9 @@ const initialState = {
             ]
           }
       case BUY_ITEM:
+          console.log('BUY_ITEM');
+          console.log('action',action);
+          console.log('payload', action.payload);
         return {
           ...state,
           additionalPrice: state.additionalPrice + action.payload.price,
